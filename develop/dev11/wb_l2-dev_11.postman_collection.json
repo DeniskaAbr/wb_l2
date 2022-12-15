@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "d23531e6-b7e3-4523-8072-0b72aee85c60",
+    "name": "wb_l2\\dev_11",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CreateEventHandler",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"title\":  \"Test Event #1\",\r\n\"description\": \"testing event description\",\r\n\"event_time\": \"2016-01-15\" ,\r\n\"user_id\": 10\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}{{api_path}}/create_event",
+          "host": [
+            "{{url}}{{api_path}}"
+          ],
+          "path": [
+            "create_event"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateEventHandler",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"id\": 1,\r\n\"title\":  \"Updated Test Event #1\",\r\n\"description\": \"testing event description\",\r\n\"event_time\": \"2016-01-15\" ,\r\n\"user_id\": 10 \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}{{api_path}}/update_event",
+          "host": [
+            "{{url}}{{api_path}}"
+          ],
+          "path": [
+            "update_event"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteEventHandler",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}{{api_path}}/delete_event",
+          "host": [
+            "{{url}}{{api_path}}"
+          ],
+          "path": [
+            "delete_event"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ForDayEventHandler",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}{{api_path}}/events_for_day?user_id=10&date=2016-01-15",
+          "host": [
+            "{{url}}{{api_path}}"
+          ],
+          "path": [
+            "events_for_day"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "10"
+            },
+            {
+              "key": "date",
+              "value": "2016-01-15"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ForWeekEventHandler",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}{{api_path}}/events_for_week?user_id=10&date=2016-01-15",
+          "host": [
+            "{{url}}{{api_path}}"
+          ],
+          "path": [
+            "events_for_week"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "10"
+            },
+            {
+              "key": "date",
+              "value": "2016-01-15"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ForMonthEventHandler",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}{{api_path}}/events_for_month?user_id=10&date=2016-01-15",
+          "host": [
+            "{{url}}{{api_path}}"
+          ],
+          "path": [
+            "events_for_month"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "10"
+            },
+            {
+              "key": "date",
+              "value": "2016-01-15"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "localhost:8081",
+      "type": "default"
+    },
+    {
+      "key": "api_path",
+      "value": "/api/v1",
+      "type": "default"
+    }
+  ]
+}
